@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.section-hero {
+  background-color: #e6edea;
+  padding: 96px 0; /* 96 top & bottom, 0 on the sides */
+}
+
+.hero {
+  max-width: 1300px;
+  margin: 0 auto; /* centres hero */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* splits into two vertical grids */
+  gap: 96px;
+  align-items: center; /* moves hero to center of screen */
+}
+
+.heading-primary {
+  font-size: 52px;
+  font-weight: 700; /* bold */
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px; /* reduces pixels between words */
+  margin-bottom: 32px; /* spacing at bottom */
+}
+
+.hero-description {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 48px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 16px 32px;
+  border-radius: 9px;
+
+  /*transition: background-color 1s;*/
+  transition: all 0.3s; /* smooth transition when hovering over button */
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #4d806f;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #045a3c;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #e6edea;
+  /* border: 3px solid #fff; */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.margin-right-small {
+  margin-right: 16px; /* adds gap to the right of first button */
+}
