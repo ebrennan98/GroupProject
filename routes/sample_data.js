@@ -4,6 +4,17 @@ var router = express.Router();
 
 var database = require("../database");
 
+/*
+// basic routing
+router.get("/", function (request, response, next) {
+  response.send("List all Sample Data");
+});
+
+router.get("/add", function (request, response, next) {
+  response.send("Add Sample Data");
+});
+*/
+
 router.get("/", function (request, response, next) {
   var query = "SELECT * FROM sample_data ORDER BY id DESC";
 
@@ -12,7 +23,7 @@ router.get("/", function (request, response, next) {
       throw error;
     } else {
       response.render("sample_data", {
-        title: "Node.js MySQL CRUD Application",
+        title: "Real Recipes",
         action: "list",
         sampleData: data,
       });

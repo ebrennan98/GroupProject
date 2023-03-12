@@ -19,12 +19,13 @@
     <div class="container">
       <h1 class="text-center mt-3 mb-3"><%= title %></h1>
 
+      <!-- If the user clicks on the add button -->
       <% if(action == 'add') { %>
 
       <div class="card">
         <div class="card-header">Sample Form</div>
         <div class="card-body">
-          <form method="POST" action="/sample_data/add_sample_data">
+          <form method="POST" action="/sample_data/add_sample_data"> <!-- add_sample_data is a function in sample_data.js -->
             <div class="row">
               <div class="col-md-6">
                 <div class="mb-3">
@@ -83,9 +84,10 @@
         </div>
       </div>
 
+      <!-- If the user clicks on the edit button -->
       <% } else if(action == 'edit') { %>
       <div class="card">
-        <div class="card-header">Sample Form</div>
+        <div class="card-header">Change persons details</div>
         <div class="card-body">
           <form method="POST" action="/sample_data/edit/<%= sampleData.id %>">
             <div class="row">
@@ -152,12 +154,13 @@
           </script>
         </div>
       </div>
-      <% } else { %>
 
+      <!-- Else, stay on main page -->
+      <% } else { %>
       <div class="card">
         <div class="card-header">
           <div class="row">
-            <div class="col">Sample Data</div>
+            <div class="col">List of Names</div>
             <div class="col">
               <a
                 href="/sample_data/add"
